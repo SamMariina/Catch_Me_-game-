@@ -75,17 +75,17 @@ right_line_distance = Width - pad_w
 def update_score(player):
     global player_1_score, player_2_score
     if player == 'right':
-        if player_1_score or player_2_score < 5:
+        if player_1_score or player_2_score < 15:
             player_1_score += 1
             c.itemconfig(p_1_text, text=player_1_score)
-        if player_1_score == 5:
+        if player_1_score == 15:
             mb.showinfo("Player_1 The winner!!!")
             root.destroy()
     else:
-        if player_1_score or player_2_score < 5:
+        if player_1_score or player_2_score < 15:
             player_2_score += 1
             c.itemconfig(p_2_text, text=player_2_score)
-        if player_2_score == 5:
+        if player_2_score == 15:
             mb.showinfo("Player_2 The winner!!!")
             root.destroy()
 
